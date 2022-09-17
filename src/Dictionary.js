@@ -22,7 +22,7 @@ export default function Dictionary() {
 
   return (
     <div className="Dictionary">
-      <h1>What word do you want to look up?</h1>
+      <h1 className="py-3">What word do you want to look up?</h1>
       <form onSubmit={serchEnter}>
         <input type="search" autoFocus="true" onChange={handleChangeSearch} />
       </form>
