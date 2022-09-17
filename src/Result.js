@@ -7,16 +7,14 @@ export default function Result(props) {
     return (
       <div className="Result">
         <h4>{props.result.word}</h4>
-        <div className="container-fluid">
-          <div className="row">
-            {props.result.meanings.map(function (meaning, index) {
-              return (
-                <div key={index} className="col">
-                  <Meaning meaning={meaning} />
-                </div>
-              );
-            })}
-          </div>
+        <div className="row">
+          {props.result.meanings.map(function (meaning, index) {
+            return (
+              <div key={index} className="col-md-4">
+                <Meaning meaning={meaning} />
+              </div>
+            );
+          })}
         </div>
       </div>
     );

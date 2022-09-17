@@ -4,7 +4,7 @@ import Dictionary from "./Dictionary.js";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App container-fluid">
       <Dictionary />
     </div>
   );
