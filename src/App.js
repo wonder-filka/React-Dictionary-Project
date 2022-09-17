@@ -1,10 +1,11 @@
 import React from "react";
 import "./App.css";
+import Dictionary from "./Dictionary.js";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello, SheCodes🖐</h1>
+      <Dictionary />
     </div>
   );
 }
