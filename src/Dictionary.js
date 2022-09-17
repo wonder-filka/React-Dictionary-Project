@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Result from "./Result.js";
 
 export default function Dictionary() {
   let [serchValue, setSerchValue] = useState("");
+  let [resultValue, setResultValue] = useState(null);
 
   function getApiData(response) {
-    alert(`${response.data[0].meanings[0].definitions[0].definition}`);
-    return console.log(response.data);
+    setResultValue(response.data[0]);
   }
 
   function serchEnter(event) {
@@ -25,6 +26,7 @@ export default function Dictionary() {
       <form onSubmit={serchEnter}>
         <input type="search" autoFocus="true" onChange={handleChangeSearch} />
       </form>
+      <Result result={resultValue} />
     </div>
   );
 }
