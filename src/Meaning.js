@@ -1,25 +1,26 @@
 import React from "react";
-// import Synonyms from "./Synonyms.js";
+import "./App.css";
 
 export default function Meaning(props) {
+  let listInfo = props.meaning.definitions.map(function (definitions, index) {
+    return (
+      <div key="index">
+        <li>
+          {definitions.definition}
+          <br />
+          <em id="example">{definitions.example}</em>
+        </li>
+      </div>
+    );
+  });
+
+  let newList = listInfo.filter(function (item, index) {
+    return index < 4;
+  });
   return (
-    <div className="Meaning">
+    <div>
       <h4>{props.meaning.partOfSpeech}</h4>
-      {props.meaning.definitions.map(function (definitions, index) {
-        if (index < 5) {
-          return (
-            <div key="index">
-              <p>
-                {definitions.definition}
-                <br />
-                <em>{definitions.example}</em>
-              </p>
-            </div>
-          );
-        } else {
-          return null;
-        }
-      })}
+      <ul>{newList}</ul>
     </div>
   );
 }

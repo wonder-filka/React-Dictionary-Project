@@ -1,8 +1,3 @@
-.App .container-fluid {
-  width: 80%;
-  margin: 1vh;
-}
-
-footer {
-  text-align: center;
+#example {
+  font-size: 11px;
 }
