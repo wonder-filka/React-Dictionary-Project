@@ -4,9 +4,9 @@ import Dictionary from "./Dictionary.js";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App m-3">
       <div className="container-fluid">
-        <Dictionary />
+        <Dictionary defaultWord="wine" />
       </div>
       <footer>
         This project was coded by Iryna Filonova and is open-sourced on{" "}

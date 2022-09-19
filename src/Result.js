@@ -9,13 +9,20 @@ export default function Result(props) {
         <h4 className="my-3">
           <u>{props.result.word}</u>
         </h4>
-        {props.result.phonetics.map(function (phonetics, index) {
-          return (
-            <div key={index}>
-              <Phonetics phonetics={phonetics} />
-            </div>
-          );
-        })}
+        <div className="row">
+          {props.result.phonetics.map(function (phonetics, index) {
+            console.log(phonetics);
+            if (phonetics.audio != "" && phonetics.text != "") {
+              return (
+                <div key={index} className="col-md-3">
+                  <Phonetics phonetics={phonetics} />
+                </div>
+              );
+            } else {
+              return null;
+            }
+          })}
+        </div>
         <div className="row">
           {props.result.meanings.map(function (meaning, index) {
             return (
