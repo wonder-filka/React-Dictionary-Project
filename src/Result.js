@@ -11,8 +11,13 @@ export default function Result(props) {
         </h4>
         <div className="row">
           {props.result.phonetics.map(function (phonetics, index) {
-            console.log(phonetics);
-            if (phonetics.audio != "" && phonetics.text != "") {
+            console.log(phonetics.text);
+            if (
+              phonetics.text != "" &&
+              phonetics.audio != "" &&
+              phonetics.text != null &&
+              phonetics.audio != null
+            ) {
               return (
                 <div key={index} className="col-md-3">
                   <Phonetics phonetics={phonetics} />
