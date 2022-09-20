@@ -1,7 +1,66 @@
 #example {
   font-size: 11px;
+  color: #d0d2f7;
 }
 
-#image {
-  width: 30%;
+.image {
+  width: 100%;
+  height: 25vh;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+#labelInput {
+  font-size: 13px;
+  color: #d0d2f7;
+}
+
+.phoneticsAudio {
+  display: flex;
+}
+
+.icon {
+  width: 60px;
+}
+
+.iconPlay {
+  background: transparent;
+  border: none;
+}
+
+.listMeans {
+  padding-left: 1vh;
+}
+
+.button-86 {
+  border: 1px solid #edeeff;
+  background: transparent;
+  padding: 5px 20px;
+  color: #edeeff;
+  border-radius: 4px;
+}
+.button-86:hover {
+  border: 1px solid #edeeff;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 5px 20px;
+  color: #4e54c8;
+  border-radius: 4px;
+}
+
+.formInput {
+  border: 1px solid #edeeff;
+  background: transparent;
+  color: #edeeff;
+  border-radius: 4px;
+}
+
+.formInput:focus {
+  outline: none;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
 }

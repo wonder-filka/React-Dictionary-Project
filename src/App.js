@@ -6,9 +6,9 @@ function App() {
   return (
     <div className="App m-3">
       <div className="container-fluid">
-        <Dictionary defaultWord="wine" />
+        <Dictionary defaultKeyword="friend" />
       </div>
-      <footer>
+      <footer className="p-5">
         This project was coded by Iryna Filonova and is open-sourced on{" "}
         <a href="https://github.com/wonder-filka/react-dictionary-project">
           GitHub

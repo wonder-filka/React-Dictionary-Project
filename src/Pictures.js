@@ -1,4 +1,5 @@
 import React from "react";
+import "./App.css";
 
 export default function Pictures(props) {
   if (props.pictures) {
@@ -6,10 +7,10 @@ export default function Pictures(props) {
       <div className="Pictures">
         <div className="row">
           {props.pictures.photos.map(function (imgData, index) {
-            if (index < 4) {
+            if (index < 8) {
               return (
-                <div key={index} className="col-md-3 p-3">
-                  <img src={imgData.src.medium} className="img-fluid" />
+                <div key={index} className="col-lg-3 p-3">
+                  <img src={imgData.src.medium} className="img-fluid image" />
                 </div>
               );
             }

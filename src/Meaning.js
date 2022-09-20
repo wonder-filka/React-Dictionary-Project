@@ -4,13 +4,11 @@ import "./App.css";
 export default function Meaning(props) {
   let listInfo = props.meaning.definitions.map(function (definitions, index) {
     return (
-      <div key="index">
-        <li>
-          {definitions.definition}
-          <br />
-          <em id="example">{definitions.example}</em>
-        </li>
-      </div>
+      <li key="index">
+        {definitions.definition}
+        <br />
+        <em id="example">{definitions.example}</em>
+      </li>
     );
   });
 
@@ -19,8 +17,8 @@ export default function Meaning(props) {
   });
   return (
     <div>
-      <h4>{props.meaning.partOfSpeech}</h4>
-      <ul>{newList}</ul>
+      <h5>{props.meaning.partOfSpeech}</h5>
+      <ul className="listMeans">{newList}</ul>
     </div>
   );
 }

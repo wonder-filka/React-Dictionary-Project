@@ -1,15 +1,20 @@
 import React from "react";
 import "./Phonetics.css";
+import "./App.css";
+import iconPlay from "./iconPlay.png";
 
 export default function Phonetics(props) {
+  let audio = new Audio(props.phonetics.audio);
+  function playAudio() {
+    audio.play();
+  }
+
   return (
-    <div className="Phonetic">
-      <figure className="p-0 m-0">
-        <audio controls src={props.phonetics.audio}>
-          Your browser does not support the
-          <code>audio</code> element.
-        </audio>
-      </figure>
+    <div className="Phonetic p-3 text-center">
+      <button onClick={playAudio} className="iconPlay">
+        <img src={iconPlay} className="icon" />
+      </button>
+      <br />
       {props.phonetics.text}
     </div>
   );
